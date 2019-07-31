@@ -1,0 +1,18 @@
+<h1><%=@artist.name %>'s Show Page</h1>
+
+<p>Name: <%= @artist.name %></p>
+
+<p>Age: <%= @artist.age%></p>
+
+<p>Title: <%= @artist.title %></p>
+
+
+<h1>Instruments</h1>
+ <% @artist.instruments.each do |instrument| %>
+ <li>
+<%= instrument.name %>
+</li>
+<% end %>
+
+
+<h3><%= link_to "All Artists",artists_path %> | <%= link_to "Associate Artist With Instruments", new_studio_path %></h3>

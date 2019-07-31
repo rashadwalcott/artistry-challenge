@@ -1,0 +1,10 @@
+<h1>Create Form</h1>
+<h2>Associate Artist With Their Instrument</h2>
+
+<%= form_for @studio do |f| %>
+<%= f.label :artist_id %>
+<%= f.collection_select(:artist_id, @artists,:id, :name) %>
+<%= f.label :instrument_id %>
+<%= f.collection_select(:instrument_id, @instruments,:id, :name) %>
+<%= f.submit %>
+<%end %>

@@ -1,0 +1,9 @@
+<h1>All Instruments</h1>
+<h3>Instruments  | Classification</h3>
+<% @instruments.each do |instrument| %>
+<li>
+<%= instrument.name %> - <%= instrument.classification %>
+</li>
+<% end %>
+
+<h4><%= link_to "All Artists", artists_path %></h4>

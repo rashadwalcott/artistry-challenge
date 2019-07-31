@@ -1,0 +1,24 @@
+<h1>Add New Artist</h1>
+
+<%= form_for @artist do |f| %>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |err_message| %>
+  <li>
+  <%= err_message %>
+  </li>
+  <% end %>
+  <% end %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :age %>
+<%= f.text_field :age %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.submit "Add Artist" %>
+<% end %><br>
+
+<%= link_to "All Artists", artists_path %>
